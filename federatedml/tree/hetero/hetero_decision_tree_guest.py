@@ -312,7 +312,7 @@ class HeteroDecisionTreeGuest(DecisionTree):
     def find_best_split_guest_and_host(self, splitinfo_guest_host):
         best_gain_host = self.decrypt(splitinfo_guest_host[1].gain)
         best_gain_host_idx = 1
-        for i in range(1, len(splitinfo_guest_host)):
+        for i in range(2, len(splitinfo_guest_host)):
             gain_host_i = self.decrypt(splitinfo_guest_host[i].gain)
             if best_gain_host < gain_host_i:
                 best_gain_host = gain_host_i
